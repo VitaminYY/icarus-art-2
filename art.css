@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    font-size: 16px;
+    --primary-color: #f8d76a;
+    --background-color: #12100f;
+    --img-border: 0.8px solid #A67C52;
+}
+
+hr {
+    border: solid 0.01px var(--primary-color);
+}
+
+body {
+    font-family: "Playwrite AU NSW", cursive;
+    font-optical-sizing: auto;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 32px solid var(--primary-color);
+}
+
+img {
+    border: var(--img-border);
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    background-color: var(--background-color);
+}
+
+.left {
+    display: flex;
+    text-align: center;
+    margin: 0px;
+    height: 100%;
+    width: 33%;
+}
+
+.left ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+    padding-left: 22px;
+}
+
+.middle {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    width: 25%;
+    height: 100%;
+    padding-left: 22px;
+}
+
+.end span {
+    color: var(--background-color);
+    font-size: large;
+    border-radius: 28px;
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    margin-right: 22px;
+}
+
+.middle2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* تغيير من center إلى flex-start */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 80px;
+    margin-bottom: 124px;
+}
+
+.one {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    height: 70%;
+    width: 55%;
+    padding-left: 10%;
+}
+
+.one .bb {
+    width: 55%;
+    height: 90%;
+}
+
+.bb h1 {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px; /* زيادة المسافة بين العنوان والنص */
+}
+
+.bb p {
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 1.6; /* تحسين قابلية قراءة النص */
+}
+
+.one .ff {
+    width: 40%; /* زيادة عرض عنصر الصورة */
+    height: 90%;
+    margin-left: 5%; /* إضافة مسافة بين النص والصورة */
+}
+
+.ff img {
+    width: 100%; /* جعل الصورة تأخذ العرض الكامل للعنصر */
+    max-width: 300px; /* أقصى عرض للصورة */
+    height: auto; /* الارتفاع يتناسب تلقائياً */
+    aspect-ratio: 3/4; /* الحفاظ على نسبة الطول إلى العرض */
+    border-radius: 0px;
+    object-fit: cover;
+}
+
+.end2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    height: 70%;
+    width: 35%;
+    margin-right: 32px;
+}
+
+.thekiss img {
+    height: 400px;
+    width: 200px;
+    border-radius: 999px;
+    object-fit: cover;
+    object-position: center 25%; /* التركيز على الوجوه في الصورة */
+}
+
+.daly img {
+    height: 70px;
+    width: 200px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.last {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.last div {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.last img {
+    height: 50px;
+    width: 50px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.row2 {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row2 div {
+    width: 20%;
+    font-size: large;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.row2 img {
+    height: 40px;
+    width: 40px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+/* Media Queries للاستجابة */
+@media (max-width: 1200px) {
+    .one {
+        width: 60%;
+        padding-left: 5%;
+    }
+    
+    .end2 {
+        width: 35%;
+        margin-right: 20px;
+    }
+    
+    .ff img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .middle2 {
+        flex-direction: column;
+        gap: 40px;
+        margin: 40px 0;
+        align-items: center;
+    }
+    
+    .one, .end2 {
+        width: 100%;
+        padding: 0 5%;
+        justify-content: center;
+    }
+    
+    .one {
+        padding-left: 5%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .one .bb, .one .ff {
+        width: 100%;
+    }
+    
+    .one .ff {
+        margin: 30px 0 0 0;
+    }
+    
+    .ff img {
+        max-width: 400px;
+        width: 80%;
+    }
+    
+    .end2 {
+        flex-direction: row;
+        margin-right: 0;
+        justify-content: space-around;
+    }
+    
+    .thekiss img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        border-width: 16px;
+    }
+    
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    .left, .middle, .end {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    
+    .left ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+    
+    .end {
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+    .end span {
+        margin-right: 0;
+    }
+    
+    .ff img {
+        max-width: 300px;
+        width: 90%;
+    }
+    
+    .end2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .thekiss img {
+        height: 300px;
+    }
+    
+    .last, .row2 {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+        padding: 20px 0;
+    }
+    
+    .last div, .row2 div {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    .bb h1 {
+        font-size: 1.5rem;
+    }
+    
+    .ff img {
+        max-width: 250px;
+    }
+    
+    .thekiss img {
+        height: 250px;
+        width: 180px;
+    }
+    
+    .daly img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 400px) {
+    .left ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .ff img {
+        max-width: 200px;
+    }
+    
+    .thekiss img {
+        height: 200px;
+        width: 150px;
+    }
+    
+    .daly img {
+        width: 150px;
+    }
+}
